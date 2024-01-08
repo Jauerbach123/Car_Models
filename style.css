@@ -1,275 +1,321 @@
-*
-{
-    margin: 0;
+html,
+body {
+    font-family: system-ui;
     padding: 0;
+    margin: 0;
+    height: 100%;
     box-sizing: border-box;
+  background-color:black;
+}
+
+
+hero-image {
+    height: 100%;
+}
+
+/*This is where you place your image url. Most images should work by just replacing the url. */
+.hero-image-container {
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url('ferrucccio_cover (1).webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   
 }
 
-.header
-{
+#hero-text {
+    height: 90%;
     width: 100%;
-    height: 100vh;
-    background-image: url(111.jpg);
-    background-color: rgba(0,0,0,0.5);
-    background-blend-mode: multiply;
-    background-position: center;
-    background-size: cover;
-    padding: 0 7%;
-    /* add transition */
-    transition: background-image 1s;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-weight: 400;
+    font-size: 3em;
+    background: linear-gradient(0.25turn, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+    padding: 10px 10px 15px 10px;
+    letter-spacing: .3em;
+}
+
+.hero-p {
+    font-size: 1em;
+    letter-spacing: .3em;
+    padding: 10px;
+    max-width: 550px;
+    background: linear-gradient(0.25turn, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+
+}
+
+.hero-butt {
+    font-weight: 400;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    background: linear-gradient(0.25turn, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+    padding: 10px 20px;
+    letter-spacing: .3em;
+    transition: padding .1s;
+}
+
+.hero-butt:hover {
+    padding: 20px 30px;
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .hero-p {
+        font-size: .8em;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 1.5em;
+    }
+
+    .hero-p {
+        padding: 10px 20px 10px 20px;
+        font-size: .7em;
+    }
+
+  
 }
 
 
+.sidenav {
+  height: 50%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
 
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
 
+.sidenav a:hover {
+  background-color:#232323;
+}
 
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  background-color: black;
+}
 
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
 
-
-
-
-
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 
 .logo
 {
-  
-  position: absolute;
-  top: 0;
-  left: 0;
     margin-left: 20px;
     margin-top: 20px;
     width: 100px;
+    cursor: pointer;
 }
 
 
+p {font-size: 16px;
+font-family: 'Brush Script MT', cursive;}
 
-.info
-{
-    width: 100%;
-    padding: 0 7%;
-    display: flex;
-    align-items: center;
-    color: #fff;
-    position: fixed;
-    bottom: 50px;
-    left: 0;
-}
-
-.info div
-{
-    margin: 0 20px;
-}
-
-.info div h2
-{
-    font-size: 45px;
-    font-weight: 400;
-}
-
-.info .line
-{
-    flex: 1;
-    background: #fff;
-    height: 4px;
-}
-
-
-
-
-ul {
-  list-style-type: none;
-  display: flex;
-  padding: 18px 0;
-  background-size: 400% 400%;
-  background-image: linear-gradient(-45deg,  black, red);
-  animation: 12s myGradient infinite;
-  border-radius: 40px;
-  box-shadow: 3px 3px 20px #ff3352;
-  
-}
-
-@keyframes myGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  
-  50%{
-    background-position: 100% 50%;
-  }
-  
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.fa-search{
-  transition: 1s;
-  cursor: pointer;
-
-}
-
-.active {
-  transition: 1s;
-}
-
-.active1{
-  transition: 1s;
-}
-
-.active2 {
-  transition: 1s;
-}
-
-.active3 {
-  transition: 1s;
-}
-
-li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 45px 45px;
-  font-family: verdana;
-  font-weight: lighter;
-  font-size: 24px;
-  letter-spacing: 1px;
-  opacity: 0.9;
-}
-
-
-
-#M1:hover {
-  color: #fff;
-  animation: 1.5s myFlash linear infinite;
-  text-shadow: 2px 2px 30px #fff;
-  transition: 2s;
-
-}
-
-#M2:hover {
-  color: #fff;
-  animation: 1.5s myFlash linear infinite;
-  text-shadow: 2px 2px 30px #fff;
-  transition: 2s;
-}
-
-#M3:hover {
-  color: #fff;
-  animation: 1.5s myFlash linear infinite;
-  text-shadow: 2px 2px 30px #fff;
-  transition: 2s;
-}
-
-#Founder:hover {
-  color: #fff;
-  animation: 1.5s myFlash linear infinite;
-  text-shadow: 2px 2px 30px #fff;
-  transition: 2s;
-}
-
-@keyframes myFlash {
-  0% {
-    opacity: 1;
-    text-shadow: transparent;
-  }
-  
-  50% {
-    opacity: .1;
-  }
-  
-  100% {
-    opacity: 1;
-    text-shadow: 2px 2px 20px #fff;
-  }
-}
-
-.line-w5 {
-  width: 5px;
-  height: 200px;
-  background: tomato;
-  position: absolute;
-  transform: translate(-50%, -50
- 
-  
-  background-image: linear-gradient(-45deg, #ff408c, #ff4040, #6666ff);
-  
-  animation: 13s myBackground infinite;
-  box-shadow: 2px 2px 10px #ff2e38;
-  transition: 3s;
-}
-
-@keyframes myBackground {
-  0% {
-    background-position: 0% 50%;
-    opacity: 0%;
-  }
-  
-  50% {
-    background-position: 100% 50%;
-  }
-  
-  100% {
-    background-position: 0% 50%;
-    opacity: 1;
-  }
-}
-
-
-@keyframes myLinear {
-  0%{
-    width: 50px;
-  }
-  
-  100% {
-    width: 250px;
-  }
-}
-
-
-
-
-
-nav {
-  transition: 3s;
-  animation: 3s myAnimation ease linear;
-}
-
-  
-  .navigation {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-  }
-  
-
-
-
-
-
-
-
-
-
-
-p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
   .who { 
-    background-color: #1abc9c;
+    background-color: #000000;
     
   }
-  .First { /* Dark Blue */
- 
+  #section1 {background-image: linear-gradient(40deg, black , #543030,#060605 );
+             text-align:center;
+
   }
-  .Second { 
-    background-color: grey; 
+  #section2 { background-image: linear-gradient(60deg, #dd3c3c , #130606,black );
+    color: white;
+    text-align:center;
     
   }
-  .Third { 
-    background-color: blue; 
+  #section3 { 
+    background-image: linear-gradient( yellow , #8b0017,black );
+       color: white;
+    text-align:center;
    
   }
-  .container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
+  
+
+
+
+
+#accordionNav {
+
+	width: 500px;
+	background-color: #1a0404;
+	border: 2px solid #111;
+	margin-top: 7px;
+}
+
+#accordionNav h3
+{
+	font-size: 20px;
+	
+}
+#accordionNav img {
+	padding-bottom: 8px;
+}
+#accordionNav a {
+	color: #eee;
+	text-decoration: none;
+	display: block;
+	padding-top: 5px;
+	padding-right: 8px;
+	padding-bottom: 5px;
+	padding-left: 8px;
+	outline: none;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;  
+}   
+}
+#accordionNav a:hover {
+	color: #151005;
+}
+.accordion {
+	overflow: hidden;
+	outline: none;
+}
+.accordionPanel {
+	margin: 0;
+	padding: 0;
+}
+.accordionPanelTab {
+	background-color: #0e0101;
+	background-image: url('../img/stripes.png');
+	margin: 0;
+	cursor: pointer;
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	color: #fff;
+	height: 35px;
+	line-height: 35px;
+	font-size: 18px;
+	text-align: center;
+}
+.accordionPanelTab:hover {
+	color: black;
+}
+.accordionPanelContent {
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	height: 315px;
+	background: url(../img/bg-accordion.jpg);
+}
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0; 
+    font-family: 'Cairo', sans-serif;
+}
+.box{
+    position: absolute;
+    top: 50%;  left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;  height: 400px;
+    color: #c8c1c1;
+  
+}
+.box span{
+    display: block;
+    position: absolute;
+    background-image: linear-gradient( black , red,yellow );
+    transition: 1s;
+  text-decoration-thickness: 5px;
+}
+.box span:nth-of-type(2n+1){
+    width: 100%;  height: 3px;
+    transition-delay: 0s;
+}
+.box span:nth-of-type(2n){
+    width: 3px;  height: 100%;
+    transition-delay: 1s;
+}
+.box span:nth-of-type(1){
+    top: 0;  left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+.box:hover span:nth-of-type(1){
+    transform: scaleX(1);
+}
+.box span:nth-of-type(2){
+    bottom: 0;  right: 0;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+.box:hover span:nth-of-type(2){
+    transform: scaleY(1);
+}
+.box span:nth-of-type(3){
+   bottom: 0;  right: 0;
+   transform-origin: right;
+   transform: scaleX(0);
+}
+.box:hover span:nth-of-type(3){
+    transform: scaleX(1);
+}
+.box span:nth-of-type(4){
+    top: 0;  left: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+.box:hover span:nth-of-type(4){
+    transform: scaleY(1);
+}
+
+
+.box .center{
+    position: absolute;
+    top: 15px;  bottom: 15px;  left: 15px;  right: 15px;
+    border: 2px solid #fff;
+    padding: 50px 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.box .center h1{
+    margin-bottom: 10px;
+}
+h4{text-decoration-line: underline;
   }
