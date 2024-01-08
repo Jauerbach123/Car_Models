@@ -1,4 +1,8 @@
 
+
+
+
+// First section
 document.getElementById("comingUpContent").style.display = "none";
 document.getElementById("pastEventsContent").style.display = "none";
 
@@ -28,14 +32,14 @@ function showEventsWeek() {
   document.getElementById("eventsWeekTab").classList.add("highlight");
 
 }
+// End of first section
 
 
 
 
 
 
-
-
+// Second Section
 document.getElementById("comingUp2").style.display = "none";
 document.getElementById("pastEvents2").style.display = "none";
 
@@ -65,17 +69,17 @@ function showtimes() {
   document.getElementById("events1").classList.add("highlight");
 
 }
+// end of second
 
 
 
 
-
-
+//Start of third
 
 document.getElementById("comingUpC").style.display = "none";
 document.getElementById("pastEventsC").style.display = "none";
 
-function hideP() {
+function hidePals() {
   document.getElementById("comingUpC").style.display = "none";
   document.getElementById("pastEventsC").style.display = "none";
   document.getElementById("eventsWeekC").style.display = "none";
@@ -86,23 +90,23 @@ function hideP() {
 }
 
 function showComingu() {
-  hideP();
+  hidePals();
   document.getElementById("comingUpC").style.display = "block";
   document.getElementById("comingUpT").classList.add("highlight");
 }
 function showPastE() {
-  hideP();
+  hidePals();
   document.getElementById("pastEventsC").style.display = "block"
   document.getElementById("pastEventsT").classList.add("highlight");
 }
 function showEventsW() {
-  hideP();
+  hidePals();
   document.getElementById("eventsWeekC").style.display = "block"
   document.getElementById("eventsWt").classList.add("highlight");
 
 }
 
-
+// Nav controls
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
